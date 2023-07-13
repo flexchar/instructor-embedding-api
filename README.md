@@ -2,6 +2,11 @@
 
 This repository contains a lightweight Sanic API for creating embeddings using the Instructor model. It is provided as a Docker container and based on the `hkunlp/instructor-large` model. The API can be used for versatile purposes, including in applications such as text classification, similarity, or clustering tasks.
 
+For more information about the Instructor model, visit the official links:
+
+-   [Model on Hugging Face](https://huggingface.co/hkunlp/instructor-large)
+-   [GitHub Repository](https://github.com/HKUNLP/instructor-embedding/tree/main)
+
 ## Quick Start
 
 ### Prerequisites
@@ -30,6 +35,15 @@ This repository contains a lightweight Sanic API for creating embeddings using t
     ```
 
 The API will be available at `http://127.0.0.1:8000/`.
+
+### Consume Pre-built Container from GitHub Packages
+
+You can also use the pre-built container available on GitHub Packages:
+
+```sh
+docker pull ghcr.io/flexchar/instructor-embedding-api:latest
+docker run --rm -p 8000:8000 ghcr.io/flexchar/instructor-embedding-api:latest
+```
 
 ### Use the API
 
