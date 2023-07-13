@@ -1,0 +1,6 @@
+torch
+numpy
+sanic
+sentence_transformers
+InstructorEmbedding
+tqdm
