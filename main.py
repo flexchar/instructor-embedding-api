@@ -9,7 +9,7 @@ import os
 MODEL_NAME = os.environ.get("MODEL_NAME")
 
 app = Sanic(__name__)
-model = INSTRUCTOR(MODEL_NAME)
+model = INSTRUCTOR("/model")
 
 
 class EncodingEndpoint(HTTPMethodView):

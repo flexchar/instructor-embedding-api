@@ -4,3 +4,4 @@ sanic
 sentence_transformers
 InstructorEmbedding
 tqdm
+transformers
