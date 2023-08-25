@@ -26,4 +26,5 @@ RUN python download_model.py
 
 COPY main.py .
 
+# Single processes performed better on a small ab test
 CMD ["sanic", "main:app", "--single-process", "--host", "0.0.0.0", "--port", "8000"]

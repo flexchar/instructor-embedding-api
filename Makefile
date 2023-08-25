@@ -5,6 +5,9 @@ CONTAINER_NAME=instructor-embedding-api
 build:
 	docker build --platform linux/amd64 -t $(IMAGE_NAME) .
 
+build-local:
+	docker build -t $(IMAGE_NAME) .
+
 run:
 	docker run --rm -p 8000:8000 --name $(CONTAINER_NAME) $(IMAGE_NAME)
 
