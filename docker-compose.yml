@@ -1,0 +1,25 @@
+version: '3.8'
+services:
+    # The Application
+    app:
+        build:
+            context: .
+            dockerfile: Dockerfile
+            args:
+                MODEL_NAME: "hkunlp/instructor-base"
+                # MODEL_NAME: "hkunlp/instructor-large"
+                # MODEL_NAME: "hkunlp/instructor-xl"
+        tty: true
+        working_dir: /app
+        command: sanic main.app --host 0.0.0.0 --port 8000 --reload --dev
+        restart: unless-stopped
+        ports:
+          - 8000:8000
+        volumes:
+            - ./:/app
+            # - model_drive:/model
+        extra_hosts:
+            - 'host.docker.internal:host-gateway'
+
+# volumes:
+#   model_drive:
